@@ -1,0 +1,35 @@
+[
+  {
+    "title": "HVAC Technician",
+    "location": "Abu Dhabi, UAE",
+    "type": "Full-time",
+    "description": [
+      "Install, maintain, and repair HVAC systems.",
+      "Diagnose and fix equipment malfunctions.",
+      "Perform regular preventative maintenance.",
+      "Must have 3+ years of experience."
+    ]
+  },
+  {
+    "title": "MEP Engineer",
+    "location": "Abu Dhabi, UAE",
+    "type": "Full-time",
+    "description": [
+      "Oversee MEP projects from conception to completion.",
+      "Coordinate with clients and contractors.",
+      "Ensure all work complies with safety standards.",
+      "Bachelor's degree in Mechanical or Electrical Engineering required."
+    ]
+  },
+  {
+    "title": "Electrician",
+    "location": "Abu Dhabi, UAE",
+    "type": "Full-time",
+    "description": [
+      "Install and maintain electrical systems and components.",
+      "Identify and repair electrical faults.",
+      "Read and interpret blueprints and technical diagrams.",
+      "Valid electrician license is required."
+    ]
+  }
+]

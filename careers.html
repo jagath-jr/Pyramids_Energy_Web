@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers - WENQURO VISION</title>
+  <link rel="icon" type="image/x-icon" href="titleImg.png">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="careers.css" /> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+  <section class="careers-hero">
+    <div class="banner" data-aos="fade-down" data-aos-delay="200">
+      <h2>Join Our Team</h2>
+      <p>Build your future with WENQURO VISION. We are looking for talented and passionate individuals to grow with us.</p>
+    </div>
+  </section>
+
+  <section class="vacancies-section">
+    <h2 data-aos="fade-up">Current Openings</h2>
+    <div class="vacancies-container" id="vacancies-list">
+      <p style="text-align:center;">Loading current job openings...</p>
+    </div>
+  </section>
+  <main class="form-section">
+    <div class="form-container">
+      <div class="form-left">
+        <h3>Why Work With Us?</h3>
+        <p>At WENQURO VISION, we believe in fostering a culture of innovation, safety, and excellence. We offer a dynamic work environment where you can contribute to challenging projects and develop your professional skills.</p>
+        
+        <p>We are committed to on-time delivery and quality workmanship, and that starts with our dedicated team. If you are ready to make an impact, we'd love to hear from you.</p>
+
+        <div class="resume-note">
+          <h4><i class="fas fa-info-circle"></i> Important Note</h4>
+          <p>After submitting this form, please email your detailed Resume/CV to:</p>
+          <a href="mailto:info@wenqurovision.ae" class="email-link">info@wenqurovision.ae</a>
+          <p>Please include your full name and the position you applied for in the email subject line.</p>
+        </div>
+      </div>
+      
+      <div class="form-right">
+        <form id="careersForm">
+          <h2 class="form-heading">Application Form</h2>
+          
+          <div class="input-group">
+            <input type="text" id="name" placeholder="Full Name" required />
+            <input type="email" id="email" placeholder="Email Address" required />
+          </div>
+
+          <div class="input-group">
+            <input type="tel" id="phone" placeholder="Phone Number" required />
+            <select id="position" required>
+              <option value="" disabled selected>Position Applying For</option>
+              <option value="hvac-technician">HVAC Technician</option>
+              <option value="electrician">Electrician</option>
+              <option value="plumber">Plumber</option>
+              <option value="civil-engineer">Civil Engineer</option>
+              <option value="site-supervisor">Site Supervisor</option>
+              <option value="mep-engineer">MEP Engineer</option>
+              <option value="general-inquiry">General Inquiry / Other</option>
+            </select>
+          </div>
+
+          <textarea id="message" placeholder="Your Message / Cover Letter" rows="6" required></textarea>
+          
+          <button class="submit-btn" type="submit">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+<div id="common-footer"></div>
+
+  <script src="main.js"></script>
+  <script src="common.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="careers-email.js"></script> <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const vacanciesList = document.getElementById('vacancies-list');
+      if (!vacanciesList) return;
+
+      fetch('job-vacancies.json')
+        .then(response => response.json())
+        .then(vacancies => {
+          if (vacancies.length === 0) {
+            vacanciesList.innerHTML = '<p style="text-align:center;">There are no current openings at this time. Please check back later or submit a general application below.</p>';
+            return;
+          }
+
+          let html = '';
+          vacancies.forEach(job => {
+            html += `
+              <div class="job-vacancy-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="job-header">
+                  <h3>${job.title}</h3>
+                  <span class="job-type">${job.type}</span>
+                </div>
+                <div class="job-location">
+                  <i class="fas fa-map-marker-alt"></i> ${job.location}
+                </div>
+                <ul class="job-description">
+                  ${job.description.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+              </div>
+            `;
+          });
+          vacanciesList.innerHTML = html;
+          
+          // Re-init AOS for new elements
+          if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 1000, once: true });
+          }
+        })
+        .catch(error => {
+          console.error('Error loading job vacancies:', error);
+          vacanciesList.innerHTML = '<p style="text-align:center; color: red;">Could not load job openings.</p>';
+        });
+    });
+  </script>
+  </body>
+</html>

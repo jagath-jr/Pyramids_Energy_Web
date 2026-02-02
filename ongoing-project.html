@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ongoing Project - WENQURO VISION</title>
+  <link rel="icon" type="image/x-icon" href="titleImg.png">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="ongoing-project.css" /> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+  <section class="project-hero">
+    <div class="banner" data-aos="fade-down" data-aos-delay="200">
+      <h2>Ongoing Projects</h2>
+    </div>
+  </section>
+
+  <main class="project-section" id="project-container-main">
+    </main>
+
+<div id="common-footer"></div>
+
+  <script src="main.js"></script>
+  <script src="common.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('project-container-main');
+      if (!container) return;
+
+      fetch('ongoing-project-data.json')
+        .then(response => response.json())
+        .then(projects => {
+          let allProjectsHtml = '';
+          
+          if (projects.length === 0) {
+              container.innerHTML = '<p style="text-align:center; padding: 2rem;">No ongoing projects listed at this time.</p>';
+              return;
+          }
+
+          projects.forEach(project => {
+            allProjectsHtml += `
+              <div class="project-container">
+                <div class="project-details" data-aos="fade-up">
+                  <h3>${project.title}</h3>
+                  <ul>
+                    <li>
+                      <span>Client:</span>
+                      <strong>${project.client}</strong>
+                    </li>
+                    <li>
+                      <span>Main Contractor:</span>
+                      <strong>${project.mainContractor}</strong>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="project-images">
+                  <div class="image-large" data-aos="fade-up" data-aos-delay="100">
+                    <img src="${project.imageLarge}" alt="Main project image for ${project.title}">
+                  </div>
+                  <div class="image-small-stack">
+                    <div class="image-small" data-aos="fade-up" data-aos-delay="200">
+                      <img src="${project.imageSmall1}" alt="Project detail image 1">
+                    </div>
+                    <div class="image-small" data-aos="fade-up" data-aos-delay="300">
+                      <img src="${project.imageSmall2}" alt="Project detail image 2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+          });
+
+          container.innerHTML = allProjectsHtml;
+
+          // Re-initialize AOS to animate the new content
+          if (typeof AOS !== 'undefined') {
+              AOS.init({
+                  duration: 1000,
+                  once: true,
+              });
+          }
+        })
+        .catch(error => {
+          console.error('Error loading project data:', error);
+          container.innerHTML = '<p style="text-align:center; padding: 2rem; color: red;">Could not load project information.</p>';
+        });
+    });
+  </script>
+
+</body>
+</html>

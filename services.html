@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services-ALUCAD</title>
+    <link rel="icon" type="image/x-icon" href="titleImg.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="services.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+    <section class="services-hero">
+            <div class="banner" data-aos="fade-down">
+                <h2 class="caption">Our Services</h2>
+
+        <p class="sub-caption">We are a trusted MEP and construction company committed to quality, innovation, and on-time project delivery.</p>
+      </div>
+            </div>
+        </section>
+
+    <section class="content-section text-center">
+        <div class="container">
+            <p>
+                We provide end-to-end MEP and construction services, including HVAC, electrical, plumbing, and civil works — ensuring quality, reliability, and efficiency in every project across the UAE.
+            </p>
+        </div>
+    </section>
+<div id="services-container"></div>
+    
+    
+<!-- Footer will load here -->
+<div id="common-footer"></div>
+
+
+    <script src="main.js"></script>
+      <script src="common.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('services-container');
+    if (!container) return;
+
+    fetch('services-data.json')
+      .then(response => response.json())
+      .then(services => {
+        let content = '';
+        services.forEach((service, index) => {
+          // Alternate layout: add 'reversed' class for even-numbered items (index 1, 3, etc.)
+          const isReversed = (index % 2 !== 0);
+
+          content += `
+            <section id="${service.id}" class="our-product section-${index + 1}">
+                <div class="our-product-container ${isReversed ? 'reversed' : ''}">
+                    <div class="image-content">
+                        <img src="${service.servicePageImage}" alt="${service.title}">
+                    </div>
+                    <div class="frame">
+                        <h1 data-aos="slide-up" data-aos-delay="200">${service.title}</h1>
+                        <p data-aos="fade-in" data-aos-delay="200">${service.servicePageDescription}</p>
+                    </div>
+                </div>
+            </section>
+          `;
+        });
+        container.innerHTML = content;
+
+        // Re-initialize AOS to animate the newly added content
+        if (typeof AOS !== 'undefined') {
+          AOS.init({
+            duration: 1000,
+            once: true,
+          });
+        }
+      })
+      .catch(error => console.error('Error loading services:', error));
+  });
+</script>
+</body>
+</html>
