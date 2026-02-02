@@ -1,0 +1,132 @@
+[
+  {
+    "id": "electrical-services",
+    "mainService": "Electrical Services",
+    "mainDescription": "Comprehensive electrical solutions covering power transmission, distribution, substations, and high-voltage systems.",
+    "subParts": [
+      {
+        "title": "Power Transmission & Distribution (Up to 400kV)",
+        "desc": "End-to-end solutions for high-voltage and extra-high-voltage power networks.",
+        "img": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800",
+        "alt": "High voltage power transmission lines"
+      },
+      {
+        "title": "HV / EHV Cable Laying & Pulling",
+        "desc": "Professional installation of underground, overhead, and submarine power cables.",
+        "img": "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=800",
+        "alt": "Heavy duty cable installation"
+      },
+      {
+        "title": "Cable Jointing & Termination",
+        "desc": "Certified jointing and termination services for XLPE and paper-insulated cables.",
+        "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800",
+        "alt": "Cable termination work"
+      },
+      {
+        "title": "GIS / AIS / SF6 Switchgear",
+        "desc": "Supply, installation, testing, and commissioning of modern switchgear systems.",
+        "img": "https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=800",
+        "alt": "Industrial switchgear panels"
+      },
+      {
+        "title": "Ring Main Units (RMU)",
+        "desc": "Installation, replacement, refurbishment, and retrofitting of RMUs.",
+        "img": "https://images.unsplash.com/photo-1621905252507-b35220adcfba?q=80&w=800",
+        "alt": "Ring main unit electrical equipment"
+      },
+      {
+        "title": "Transformer Supply & Maintenance",
+        "desc": "Oil-filled and dry-type transformer solutions including installation and testing.",
+        "img": "https://images.unsplash.com/photo-1565039272186-2a62372f447f?q=80&w=800",
+        "alt": "Large power transformer"
+      }
+    ]
+  },
+  {
+    "id": "operation-maintenance",
+    "mainService": "Operation & Maintenance",
+    "mainDescription": "Planned and corrective maintenance, testing, and fault-response services.",
+    "subParts": [
+      {
+        "title": "Preventive & Corrective Maintenance",
+        "desc": "Planned and emergency maintenance services to minimize downtime.",
+        "img": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=800",
+        "alt": "Maintenance on electrical panel"
+      },
+      {
+        "title": "Substation Assessment",
+        "desc": "Detailed inspection, testing, and root cause analysis.",
+        "img": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800",
+        "alt": "Substation inspection"
+      },
+      {
+        "title": "Transformer Oil Filtration",
+        "desc": "On-site and workshop oil treatment services to restore dielectric strength.",
+        "img": "https://images.unsplash.com/photo-1590959651373-a3db0f38a961?q=80&w=800",
+        "alt": "Oil filtration machine"
+      },
+      {
+        "title": "Condition Monitoring",
+        "desc": "Data-driven analysis to optimize maintenance strategies.",
+        "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
+        "alt": "Thermal imaging analysis"
+      }
+    ]
+  },
+  {
+    "id": "civil-mechanical-works",
+    "mainService": "Civil & Mechanical Works",
+    "mainDescription": "Coordinated civil and mechanical services supporting electrical infrastructure.",
+    "subParts": [
+      {
+        "title": "Road Works & Excavation",
+        "desc": "Civil works including trenching, reinstatement, and infrastructure preparation.",
+        "img": "https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?q=80&w=800",
+        "alt": "Excavation works"
+      },
+      {
+        "title": "Pipeline Installation",
+        "desc": "Design and installation of HDPE pipelines for utility and industrial applications.",
+        "img": "https://images.unsplash.com/photo-1542312061-9c631e809311?q=80&w=800",
+        "alt": "Pipeline installation"
+      },
+      {
+        "title": "Mechanical Installations",
+        "desc": "Mechanical erection and associated works supporting electrical projects.",
+        "img": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800",
+        "alt": "Mechanical piping system"
+      }
+    ]
+  },
+  {
+    "id": "specialized-services",
+    "mainService": "Specialized Services",
+    "mainDescription": "Specialized solutions designed for complex power systems and critical installations.",
+    "subParts": [
+      {
+        "title": "Silicon Rubber Coating",
+        "desc": "RTV silicone coating solutions to improve insulation performance.",
+        "img": "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?q=80&w=800",
+        "alt": "Insulator coating"
+      },
+      {
+        "title": "Overhead Transmission Lines",
+        "desc": "Design, erection, and commissioning of overhead transmission lines.",
+        "img": "https://images.unsplash.com/photo-1487800940032-1c667b595186?q=80&w=800",
+        "alt": "Overhead power lines"
+      },
+      {
+        "title": "Mobile Grid Stations",
+        "desc": "Rapid deployment power solutions for temporary requirements.",
+        "img": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800",
+        "alt": "Mobile power substation"
+      },
+      {
+        "title": "Power Connections",
+        "desc": "Safe shifting and connection of LV & HV networks and feeder pillars.",
+        "img": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=800",
+        "alt": "Power connection meters"
+      }
+    ]
+  }
+]

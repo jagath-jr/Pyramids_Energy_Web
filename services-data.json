@@ -1,34 +1,26 @@
 [
   {
-    "id": "hvac-works",
-    "title": "HVAC Works",
-    "homePageImage": "Home-img/HVAC Workshome.webp",
-    "servicePageImage": "Our service images/HVAC Works.webp",
-    "homePageDescription": "Installation, maintenance, commissioning of all types of air-conditioning systems including FCU, AHU, FAHU, VAV, CAV, CCU, and DX units. Ducting, insulation, chilled water systems & air balancing services.",
-    "servicePageDescription": "Our expertise in heating, ventilation, and air-conditioning has evolved with modern technology while retaining the core principles of quality and precision. From traditional systems to advanced climate control solutions, we have consistently delivered comfort and reliability across residential, commercial, and industrial projects. Over the years, our commitment to innovation and performance has made us a trusted name in HVAC installation, maintenance, and commissioning throughout the UAE."
+    "id": "electrical-services",
+    "title": "Electrical Services",
+    "homePageDescription": "Comprehensive electrical solutions covering power transmission, distribution, substations, and high-voltage systems.",
+    "homePageImage": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800"
   },
   {
-    "id": "electrical-works",
-    "title": "Electrical Works",
-    "homePageImage": "Our service images/Electrical Works.webp",
-    "servicePageImage": "Our service images/Electrical Works.webp",
-    "homePageDescription": "Installation, testing, and maintenance of electrical systems including control panels, SMDB, MCB, cable pulling & dressing, tray works, light fittings, and all types of device installations across UAE.",
-    "servicePageDescription": "Installation, testing, and maintenance of electrical systems including control panels, SMDB, MCB, cable pulling & dressing, tray works, light fittings, and all types of device installations across UAE."
+    "id": "operation-maintenance",
+    "title": "Operation & Maintenance",
+    "homePageDescription": "Planned and corrective maintenance, testing, and fault-response services.",
+    "homePageImage": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=800"
   },
   {
-    "id": "plumbing-works",
-    "title": "Plumbing Works",
-    "homePageImage": "Our service images/Plumbing Works.webp",
-    "servicePageImage": "Our service images/Plumbing Works.webp",
-    "homePageDescription": "Installation and maintenance of all plumbing and drainage systems including booster, transfer, submersible, circulation, and irrigation pumps. Complete piping works in PVC, UPVC, PPR, and HDPE",
-    "servicePageDescription": "Blending traditional craftsmanship with modern techniques, our plumbing services ensure precision, durability, and efficiency in every connection. From water supply and drainage systems to advanced pump installations, we provide comprehensive plumbing solutions that stand the test of time. Our work continues to support projects across the UAE, maintaining quality, sustainability, and functionality in every drop."
+    "id": "civil-mechanical-works",
+    "title": "Civil & Mechanical Works",
+    "homePageDescription": "Coordinated civil and mechanical services supporting electrical infrastructure.",
+    "homePageImage": "https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?q=80&w=800"
   },
   {
-    "id": "civil-works",
-    "title": "Civil Works",
-    "homePageImage": "Our service images/Civil.webp",
-    "servicePageImage": "Our service images/Civil.webp",
-    "homePageDescription": "Comprehensive construction and maintenance services including wall & floor painting, tile installation, masonry work, and all types of building repair and renovation activities.",
-    "servicePageDescription": "Rooted in strength and built on trust, our civil works division continues to evolve with the progress of modern construction. From structural maintenance to interior finishing, we bring together skilled workmanship and innovative materials to create lasting results. Every wall, floor, and surface we touch reflects our dedication to quality, endurance, and aesthetic perfection — shaping spaces that stand firm for generations."
+    "id": "specialized-services",
+    "title": "Specialized Services",
+    "homePageDescription": "Specialized solutions designed for complex power systems.",
+    "homePageImage": "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?q=80&w=800"
   }
 ]

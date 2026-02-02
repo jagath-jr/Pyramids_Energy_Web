@@ -168,38 +168,74 @@
 
 <!---===========services =========-->
 
-      </main>
-    
-</section>
-  <div class="connect-section">
-      <div class="container-con">
-          <div class="connect-form">
-              <h2>Quick Connect</h2>
-           <form id="contactForm">
-
-    <input type="text" id="name" placeholder="Name" required />
-    <input type="tel" id="phone" placeholder="Phone No" required />
-    <input type="email" id="email" placeholder="Email" required />
-
-    <select id="services" required>
-        <option value="" disabled selected>Choose Service</option>
-                      <option>HVAC Works</option>
-                      <option>Electrical Works</option>
-                      <option>Plumbing Works</option>
-                      <option>Civil Works</option>
-                      
-    </select>
-
-    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-
-    <button type="submit" class="submit-btn">Call Request</button>
-    
-</form>
-          </div>
-      </div>
-  </div>
    
+<main class="contact-section">
+  <div class="contact-section__header-container">
+    <h1 class="contact-section__main-title">Contact us</h1>
+  </div>
 
+  <section class="contact-section__content-wrapper">
+    <aside class="contact-section__map-column">
+      <figure class="contact-section__map-frame">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5135.227334983107!2d54.35454721076539!3d24.480117960699236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e67ca98c3ce3b%3A0xc77c211ae9eb43e5!2sPyramids%20Energy!5e0!3m2!1sen!2sin!4v1770033164692!5m2!1sen!2sin" 
+          class="contact-section__map-iframe"
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Google Map Location">
+        </iframe>
+      </figure>
+    </aside>
+
+    <article class="contact-section__form-column">
+      <div class="contact-section__card">
+        <h2 class="contact-section__card-title">Quick Connect</h2>
+        
+        <form class="contact-section__form" action="#" method="POST">
+          
+          <div class="contact-section__row">
+            <div class="contact-section__input-group">
+              <label for="contact-name" class="contact-section__sr-only">Name</label>
+              <input type="text" id="contact-name" name="name" class="contact-section__input" placeholder="Name" required>
+            </div>
+            
+            <div class="contact-section__input-group">
+              <label for="contact-phone" class="contact-section__sr-only">Phone No</label>
+              <input type="tel" id="contact-phone" name="phone" class="contact-section__input" placeholder="Phone No">
+            </div>
+          </div>
+
+          <div class="contact-section__row">
+            <div class="contact-section__input-group">
+              <label for="contact-email" class="contact-section__sr-only">Email</label>
+              <input type="email" id="contact-email" name="email" class="contact-section__input" placeholder="Email" required>
+            </div>
+            
+            <div class="contact-section__input-group">
+              <label for="contact-service" class="contact-section__sr-only">Choose services</label>
+              <div class="contact-section__select-wrapper">
+                <select id="contact-service" name="service" class="contact-section__input contact-section__select">
+                  <option value="" disabled selected>Choose services</option>
+                  <option value="consulting">Consulting</option>
+                  <option value="development">Development</option>
+                  <option value="design">Design</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-section__input-group">
+            <label for="contact-message" class="contact-section__sr-only">Your Message</label>
+            <textarea id="contact-message" name="message" class="contact-section__textarea" placeholder="Your Message" rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="contact-section__btn">Call Request</button>
+        </form>
+      </div>
+    </article>
+  </section>
+</main>
  
 
 <!-- Footer will load here -->
@@ -212,6 +248,69 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script src="email.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Check if GSAP is loaded
+  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. Header Animation
+    gsap.from(".contact-section__main-title", {
+      scrollTrigger: {
+        trigger: ".contact-section",
+        start: "top 85%",
+      },
+      y: -30,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    });
+
+    // 2. Map Animation
+    gsap.from(".contact-section__map-frame", {
+      scrollTrigger: {
+        trigger: ".contact-section",
+        start: "top 75%",
+      },
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      ease: "power2.out"
+    });
+
+    // 3. Form Card Animation
+    gsap.from(".contact-section__card", {
+      scrollTrigger: {
+        trigger: ".contact-section__form-column",
+        start: "top 80%",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out"
+    });
+
+    // 4. Input Fields Animation (The Fix is here)
+    // We only target 'input-group' and 'btn'. 
+    // The textarea is inside an input-group, so it will animate automatically.
+    gsap.from(".contact-section__input-group, .contact-section__btn", {
+      scrollTrigger: {
+        trigger: ".contact-section__form",
+        start: "top 90%",
+      },
+      y: 20,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.1, // Elements appear one by one
+      delay: 0.2,
+      clearProps: "all" // SAFETY: Removes hidden styles after animation ends
+    });
+
+  } else {
+    console.warn("GSAP not loaded. Animations skipped.");
+  }
+});
+</script>
 
 </body>
 
