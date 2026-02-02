@@ -1,19 +1,21 @@
-/* General Body Styles */
-a {
-    text-decoration: none;
-    color: inherit; /* Keeps the parent's text color */
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
+/* --- 1. RESET & BASICS --- */
 body {
   font-family: 'Segoe UI', sans-serif;
   color: #1a1a1a;
   box-sizing: border-box;
   margin: 0;
+  
 }
 
-/* Header & Navbar */
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- 2. HEADER WRAPPER --- */
 #headerWrapper {
   position: fixed;
   top: 0;
@@ -22,214 +24,173 @@ body {
   z-index: 1000;
   transition: transform 0.4s ease-in-out;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.515);
 }
 
 .hide-header {
   transform: translateY(-100%);
 }
-.top-border{
-  background: #E17D27;
-  
-  padding:.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.top-bar{
-  background: #1B7458;
-  color: white;
-  padding: 5px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-}
-
-
-
-.top-bar .icon {
-  width: 14px;
-  height: 14px;
-  vertical-align: middle;
-  margin-right: 5px;
-}
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  background: transparent;
+padding: .5rem 3rem;
   position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo img {
   width: 5rem;
   display: block;
-
 }
 
 .menu-icon {
   display: none;
   font-size: 28px;
   cursor: pointer;
-  color: white;
+  color: #000;
+  user-select: none;
 }
 
+/* --- 3. DESKTOP STYLES & ANIMATION --- */
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 3rem;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 3rem;
   margin: 0;
   padding: 0;
 }
 
+/* Desktop Load Animation */
+@keyframes slideDownFade {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.nav-links li, .btn-outline {
+  animation: slideDownFade 0.8s ease forwards;
+  /* Uses the variable we added in HTML for delay */
+  animation-delay: calc(var(--i) * 0.1s); 
+  opacity: 0; /* Hidden before animation starts */
+}
+
 .nav-links li a {
   text-decoration: none;
-  color:white;
+  color: #000;
   font-weight: 500;
   padding-bottom: 5px;
   transition: border-bottom 0.2s ease;
 }
 
 .nav-links li a:hover {
-  border-bottom: 3px solid #B22005;
+  border-bottom: 2px solid #010101;
 }
 
+/* --- 4. BUTTON STYLES --- */
 .btn-outline {
   background: #B22005;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 25px;
   border-radius: 6px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-outline:hover {
-  background: #eb4427;
+  transform: translateY(-2px);
+  background-color: #aa1a00b3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-
-/* WhatsApp Button */
-#whatsapp .wtsapp {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 50px;
-  height: 50px;
-  background: #25d366;
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  text-decoration: none; /* 👈 Add this line */
-}
-
-#whatsapp .wtsapp:hover {
-  transform: scale(1.1);
-}
-
-#whatsapp .wtsapp::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #25d366;
-  border-radius: 50%;
-  animation: pulse-border 1.5s ease-out infinite;
-}
-
-@keyframes pulse-border {
-  0% {
-    transform: translateX(-50%) translateY(-50%) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-50%) translateY(-50%) scale(1.5);
-    opacity: 0;
-  }
-}
-
-/* Responsive Styles */
+/* --- 5. MOBILE RESPONSIVE ANIMATION --- */
 @media (max-width: 768px) {
- 
+  .navbar { padding: 0rem 15px; }
+  .menu-icon { display: block; }
 
-  .top-bar {
-    font-size: 11px;
-    padding: 5px 10px;
-  }
-
-  .top-bar .icon {
-    width: 12px;
-    height: 12px;
-  }
-
-  .navbar {
-    padding: 10px 15px;
-  }
-.nav-links li a{
-  color: black;
-}
-  .menu-icon {
-    display: block;
-  }
-
+  /* Mobile Menu Container */
   .nav-right {
-    display: none;
     position: absolute;
-    top: 100%;
-    right: 5%;
-    left: 5%;
-    width: 80%;
+    top: 110%;
+    left: 5%; 
+    width: 90%;
+    max-width: 400px;
     background: white;
     flex-direction: column;
-    align-items: start;
-    padding: 20px;
+    
+    /* ALIGNMENT FIXES */
+    align-items: flex-start; /* Forces children (ul and button) to the left */
+    padding: 30px 2rem;      /* Gives the content some breathing room from the edge */
+    
+    gap: 25px; /* Space between the list and the button */
     box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    z-index: 900;
+    border-radius: 8px;
+
+    /* Hidden State */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
-  .nav-right.show {
-    display: flex;
+  /* Active State */
+  .nav-right.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .nav-links {
     flex-direction: column;
-    text-align: start;
     gap: 20px;
+    text-align: left; /* Aligns text inside the <li> to the left */
     width: 100%;
+    padding-left: .8rem;       /* Removes default browser padding */
+    margin: 0;
   }
 
-  .btn-outline {
-      margin-top: 20px;
+  .nav-links li {
+    width: 100%;
+    width: 100%; 
+    border-bottom: 1px solid #e0e0e0; /* The underline */
+    padding-bottom: 12px;           /* Space for the "box" feel */
+    opacity: 0; 
+    transform: translateX(-20px);
+    transition: all 0.4s ease;      /* Allows the link area to span the width */
   }
 
-  #whatsapp .wtsapp {
-    width: 45px;
-    height: 45px;
-    font-size: 24px;
-    bottom: 15px;
-    right: 15px;
+  /* Reset/Mobile Animation Styles */
+  .nav-links li, .btn-outline {
+    animation: none;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease;
+  }
+
+  /* Staggered Entrance */
+  .nav-right.active .nav-links li,
+  .nav-right.active .btn-outline {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: calc(var(--i) * 0.1s);
   }
 }
+
+
+
+
+
 
 
 

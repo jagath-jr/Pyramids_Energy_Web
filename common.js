@@ -1,63 +1,75 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
-  // --- 1. LOAD THE HEADER ---
-  fetch("header.html")
-    .then((response) => response.text())
-    .then((data) => {
-      // Inject the fetched HTML
-      document.getElementById("header-placeholder").innerHTML = data;
 
-      // --- 2. ADD HEADER-RELATED FUNCTIONALITY ---
-      
+  // 1. Fetch the Header
+  fetch("header.html")
+    .then((response) => {
+      if (!response.ok) throw new Error("Header file not found!");
+      return response.text();
+    })
+    .then((data) => {
+      // 2. Inject HTML
+      const placeholder = document.getElementById("header-placeholder");
+      if (placeholder) {
+        placeholder.innerHTML = data;
+      } else {
+        console.error("Error: <div id='header-placeholder'></div> is missing.");
+        return;
+      }
+
+      // 3. Define Elements (After injection)
+      const menuBtn = document.getElementById("menuBtn");
+      const navMenu = document.getElementById("navMenu");
       const headerWrapper = document.getElementById("headerWrapper");
 
-      // Mobile menu toggle functionality
-      window.toggleMenu = function () {
-        const menu = document.getElementById("navMenu");
-        if (menu) {
-          menu.classList.toggle("show");
-        }
-      };
-
-      // Header scroll-hide functionality
-      if (headerWrapper) {
-        let lastScrollTop = 0;
-        
-        window.addEventListener("scroll", function () {
-          // Look up the menu freshly inside the scroll event
-          const activeMenu = document.getElementById("navMenu");
+      // 4. Toggle Menu Logic (Mobile)
+      if (menuBtn && navMenu) {
+        menuBtn.addEventListener("click", function (e) {
+          e.stopPropagation(); // Prevent immediate closing
+          navMenu.classList.toggle("active");
           
-          let scrollTop = window.scrollY || document.documentElement.scrollTop;
-          
-          // SCROLL DOWN BEHAVIOR
-          if (scrollTop > lastScrollTop) {
-            
-            // 1. Hide the Header Bar
-            headerWrapper.classList.add("hide-header");
-
-            // 2. FORCE CLOSE THE MOBILE MENU
-            // If the menu exists and is currently open, close it.
-            if (activeMenu && activeMenu.classList.contains("show")) {
-              activeMenu.classList.remove("show");
-            }
-
-          } 
-          // SCROLL UP BEHAVIOR
-          else {
-            // Show the Header Bar
-            headerWrapper.classList.remove("hide-header");
-            
-            // Note: We usually do NOT re-open the menu automatically 
-            // when scrolling up, as that is annoying for users.
+          // Toggle icon between ☰ and ✕ (Optional visual cue)
+          if (navMenu.classList.contains("active")) {
+            menuBtn.innerHTML = "✕"; 
+          } else {
+            menuBtn.innerHTML = "☰";
           }
-          
-          // Prevent negative scrolling values (bounce effect on mobile)
-          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+        });
+
+        // Close menu when clicking anywhere else on body
+        document.addEventListener("click", function (e) {
+          if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+            navMenu.classList.remove("active");
+            menuBtn.innerHTML = "☰";
+          }
         });
       }
+
+      // 5. Scroll Logic (Hide Header)
+      let lastScrollTop = 0;
+      window.addEventListener("scroll", function () {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (headerWrapper) {
+          if (scrollTop > lastScrollTop && scrollTop > 50) {
+            // Scrolling Down -> Hide Header
+            headerWrapper.classList.add("hide-header");
+            // Also close mobile menu if open
+            if (navMenu) {
+              navMenu.classList.remove("active");
+              if (menuBtn) menuBtn.innerHTML = "☰";
+            }
+          } else {
+            // Scrolling Up -> Show Header
+            headerWrapper.classList.remove("hide-header");
+          }
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+
     })
-    .catch((error) => console.error("Error loading the header:", error));
+    .catch((error) => console.error("Error loading header:", error));
 });
+
 
 
 

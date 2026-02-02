@@ -1,359 +1,317 @@
-/* General Body and Typography */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* --- Variables & Reset --- */
+:root {
+    /* Exact Terracotta color picked from image */
+    --pm-primary: #C55A45; 
+    --pm-text-dark: #1a1a1a;
+    --pm-text-body: #333333;
+    --pm-bg-white: #ffffff;
+    --pm-font-main: 'Inter', sans-serif; /* Ensure you have a clean sans-serif loaded */
 }
 
-body {
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-
-
-/* About Section Styling */
-.about-section {
-    padding: 60px 0;
-    overflow: hidden; /* Prevents scrollbars during animations */
-}
-
-.about-section .container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-/* Left Column: Content */
-.about-content {
-    flex: 1; /* Takes up 50% of the space */
-    padding-right: 20px;
-}
-
-.section-title {
-    font-size: 2.5rem; /* 40px */
-    color: #C04745; /* Reddish color from the image */
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.section-paragraph {
-    font-size: 1rem; /* 16px */
-    margin-bottom: 20px;
-    text-align: justify;
-}
-
-/* Right Column: Image */
-.about-image {
-    flex: 1; /* Takes up 50% of the space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-image img {
+.pm-main {
+    font-family: var(--pm-font-main);
+    color: var(--pm-text-body);
+    line-height: 1.5;
     width: 100%;
-    height: 37rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-    
+    overflow-x: hidden;
 }
 
-
-/* Mission and Vision Boxes */
-.info-boxes-container {
-    margin-top: 30px;
+.pm-container {
+    max-width: 1000px; /* Slightly narrower to match reading width in image */
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.info-box {
+.pm-section {
+    padding: 3rem 0;
+}
+
+/* --- Hero Section --- */
+.pm-hero {
+    position: relative;
+    height: 300px;
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
-    border: 1px solid #E0E0E0;
-    border-radius: 12px;
-    background-color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-.info-box.mission-box {
-    margin-bottom: 20px; /* Space between mission and vision */
-}
-
-.info-box-icon-wrapper {
-    flex-shrink: 0;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #E17D27;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-
-.info-box-text h3 {
-    font-size: 1.5rem; /* 24px */
-    color: #333;
-    margin: 0 0 5px 0;
-    font-weight: 600;
-}
-
-.info-box-text p {
-    font-size: 0.95rem; /* ~15px */
-    margin: 0;
-    color: #555;
-}
-
-/* Responsive Design */
-
-/* For Tablets */
-@media (max-width: 992px) {
-    .about-section .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-content {
-        padding-right: 0;
-        margin-bottom: 40px;
-    }
-
-    .info-box {
-        text-align: left; /* Keep text left-aligned inside boxes */
-    }
-}
-
-/* For Mobile Phones */
-@media (max-width: 576px) {
-    .section-title {
-        font-size: 2rem; /* 32px */
-    }
-
-    .info-box {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .info-box-icon-wrapper {
-        margin-bottom: 15px;
-    }
-
-    .info-box-text h3 {
-        font-size: 1.25rem; /* 20px */
-    }
-}
-
-/* Hero Section */
-.services-hero {
-    background-image: url('images/frameless.png');
+    /* Industrial/Construction placeholder */
+    background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop'); 
     background-size: cover;
     background-position: center;
-    height: 80vh;
+}
+
+.pm-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Darkens the image */
+    z-index: 1;
+}
+
+.pm-hero__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.pm-hero__title {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* --- Company Overview --- */
+.pm-overview {
+    padding-bottom: 1rem;
+}
+
+.pm-text {
+    font-size: 0.95rem;
+    color: var(--pm-text-body);
+    text-align: justify; /* Matches the clean block look */
+}
+
+.pm-text--bold-title {
+    font-weight: 800;
+    color: #000;
+    margin-right: 4px;
+}
+
+/* --- Mission & Vision --- */
+.pm-values__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .pm-values__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.pm-value__heading {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 0.8rem;
+    /* Lowercase as per image design */
+    text-transform: lowercase; 
+}
+
+.pm-card-solid {
+    background-color: var(--pm-primary);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    min-height: 140px; /* Ensures equal height look */
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-
-
-.banner h2 {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
-    font-weight: 600;
-}
-.banner .caption {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #FFFFFF;
-    margin-bottom: 10px;
-    text-align: center;
-}
-.banner .sub-caption {
-    font-size: 1.2rem;
-    color: #FFFFFF;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
+.pm-card-solid p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
 }
 
-/* About Description Section */
-.about-description {
-    padding: 40px 60px;
-    background-color: #ffffff;
+/* --- Director's Message --- */
+.pm-section__subheading {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.pm-message__box {
+    border: 2px solid var(--pm-primary); /* The specific Red Border */
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 2rem;
+    position: relative;
+}
+
+.pm-message__box p {
+    margin: 0;
+    color: var(--pm-text-body);
     font-size: 1rem;
-    line-height: 1.8;
+    font-weight: 400;
 }
 
-.about-description p {
-    margin-bottom: 20px;
-    text-align: justify;
-}
-
-
-/* Statistics Section */
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-}
-
-
-/* What We Offer Section */
-.offer-section {
-    padding: 50px 20px;
+/* --- What We Offer --- */
+.pm-section__heading-center {
     text-align: center;
-    background-color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #000;
 }
 
-.offer-section h2 {
-    font-size: 2.2rem;
-    color: rgba(27, 116, 88, 0.89);
-    margin-bottom: 15px;
+.pm-offer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
 
-.offer-section p {
-    color: #000000;
-    max-width: 600px;
-    margin: 0 auto 40px;
+@media (min-width: 768px) {
+    .pm-offer__grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-.offer-cards {
+.pm-offer-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #eecbc6; /* Very light red border */
+    border-radius: 15px; /* Rounded pill/capsule shape */
+    padding: 1rem 1.5rem;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.pm-offer-item:hover {
+    border-color: var(--pm-primary);
+    transform: translateY(-2px);
+}
+
+.pm-offer-item__icon-box {
+    background-color: var(--pm-primary); /* Red circle background */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.pm-icon {
+    width: 20px;
+    height: 20px;
+    stroke: #fff; /* White icon lines */
+}
+
+.pm-offer-item__text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--pm-text-dark);
+    line-height: 1.3;
+}
+
+/* --- Certifications Section --- */
+.pm-certifications {
+    background-color: var(--pm-bg-white);
+    padding-bottom: 5rem;
+}
+
+.pm-cert-grid {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 2rem;
     flex-wrap: wrap;
 }
 
-.offer-card {
-    background: #ffffff;
-    background-image: linear-gradient(180deg, #1B7458C7, #E17D27BA);
-    color: white;
-    flex: 1 1 250px;
-    max-width: 280px;
-    padding: 30px;
+.pm-cert-item {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Controls thumbnail size */
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    cursor: pointer;
+    overflow: hidden;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.offer-card:hover {
+.pm-cert-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-.offer-card-icon {
-    background: white;
-    color: rgba(27, 116, 88, 0.89);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.pm-cert-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.pm-cert-item:hover .pm-cert-img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Hover Overlay with Plus Icon */
+.pm-cert-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-
-/* --- Responsive Design --- */
-
-/* Tablet and Smaller Desktops (max-width: 1024px) */
-@media (max-width: 1024px) {
-    .left-content {
-        padding: 40px;
-    }
-
-    .left-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .list-item {
-        font-size: 1.1rem;
-    }
-
-    .stats {
-        flex-wrap: wrap;
-    }
-
-    .stat-box {
-        flex-basis: calc(50% - 20px);
-        margin-bottom: 20px;
-    }
+.pm-cert-item:hover .pm-cert-overlay {
+    opacity: 1;
 }
 
-/* Mobile Devices (max-width: 768px) */
-@media (max-width: 768px) {
-    .banner h2 {
-        font-size: 2.2rem;
-    }
+.pm-cert-zoom-icon {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 300;
+}
 
-    .about-description {
-        padding: 30px 20px;
-    }
+/* --- Lightbox / Modal Styles --- */
+.pm-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    z-index: 9999; /* On top of everything */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none; /* Click-through when hidden */
+    transition: opacity 0.3s ease;
+}
 
-    .full-section {
-        flex-direction: column;
-    }
+.pm-lightbox.active {
+    opacity: 1;
+    pointer-events: all;
+}
 
-    .right-image {
-        min-height: 250px;
-        width: 100%;
-    }
+.pm-lightbox__content {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+}
 
-    .left-content {
-        padding: 30px 20px;
-        text-align: center;
-    }
+.pm-lightbox__image {
+    max-width: 100%;
+    max-height: 90vh;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
 
-    .list-item {
-        
-        padding-left: 6.25rem;
-    }
+.pm-lightbox__close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 10000;
+}
 
-    .toggle-buttons {
-        justify-content: center;
-    }
-
-    .mission-vision-text {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .stats {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .stat-box {
-        flex-basis: 100%;
-        margin-bottom: 0;
-    }
-
-    .offer-cards {
-        
-        align-items: center;
-    }
-
-    .offer-card {
-        width: 100%;
-        max-width: 400px;
-    }
+.pm-lightbox__close:hover {
+    color: var(--pm-primary);
 }
