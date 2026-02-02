@@ -44,7 +44,7 @@ background: rgba(255, 255, 255, 0.74);
 }
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
   gap: 20px;
 }
 .gallery-item {
@@ -184,7 +184,7 @@ font-size: 4rem;
     background-image: url('Home-img/SPlumbing Works.webp');
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    height: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;

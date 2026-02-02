@@ -1,0 +1,47 @@
+{
+  "pageContent": {
+    "title": "Join Our Team",
+    "description": "Build your future with Pyramids Energy. We are seeking skilled and dedicated professionals to grow with us in delivering impactful power infrastructure projects."
+  },
+  "jobs": [
+    {
+      "id": "job-1",
+      "title": "Electrical Engineers",
+      "location": "Abu Dhabi",
+      "type": "Full Time",
+      "responsibilities": [
+        "Plan and supervise electrical works for power and infrastructure projects",
+        "Bachelor's degree in Electrical Engineering",
+        "3–7 years of experience in HV/MV systems, substations, and cabling",
+        "Familiar with DEWA / ADDC / ADNOC standards (preferred)",
+        "Strong coordination and problem-solving skills"
+      ]
+    },
+    {
+      "id": "job-2",
+      "title": "Electrical Engineers",
+      "location": "Abu Dhabi",
+      "type": "Full Time",
+      "responsibilities": [
+        "Plan and supervise electrical works for power and infrastructure projects",
+        "Bachelor's degree in Electrical Engineering",
+        "3–7 years of experience in HV/MV systems, substations, and cabling",
+        "Familiar with DEWA / ADDC / ADNOC standards (preferred)",
+        "Strong coordination and problem-solving skills"
+      ]
+    },
+    {
+      "id": "job-3",
+      "title": "Electrical Engineers",
+      "location": "Abu Dhabi",
+      "type": "Full Time",
+      "responsibilities": [
+        "Plan and supervise electrical works for power and infrastructure projects",
+        "Bachelor's degree in Electrical Engineering",
+        "3–7 years of experience in HV/MV systems, substations, and cabling",
+        "Familiar with DEWA / ADDC / ADNOC standards (preferred)",
+        "Strong coordination and problem-solving skills"
+      ]
+    }
+  ]
+}
