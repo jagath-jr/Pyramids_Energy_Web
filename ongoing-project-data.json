@@ -1,11 +1,92 @@
 [
   {
-    "id": "district-one-west",
-    "title": "District One West, Phase 1 Villas, Infrastructure, and All Associated Works (Packages1)",
-    "client": "Meydan Group LLC",
-    "mainContractor": "Fibrex Contracting LLC",
-    "imageLarge": "Gallery img/gallery4.webp",
-    "imageSmall1": "Our service images/Civil.webp",
-    "imageSmall2": "Gallery img/gallery3.webp"
+    "id": 1,
+    "title": "HCK & OLM LIGHTING UPGRADE PROJECT",
+    "client": "ADNOC Refining",
+    "contractor": "Pyramids Energy"
+  },
+  {
+    "id": 2,
+    "title": "RIYADH CITY NORTH - PHASE 7A INFRASTRUCTURE AND STREETSCAPE",
+    "client": "Aldar Projects LLC",
+    "contractor": "Western Bainoona Group for General Contracting LLC"
+  },
+  {
+    "id": 3,
+    "title": "REROUTING AND RELOCATION OF UTILITY SERVICES AT PLOT C3 C4 IN SECTOR W5",
+    "client": "Al Nadha Investment",
+    "contractor": "Bauer International FZE"
+  },
+  {
+    "id": 4,
+    "title": "HADI AL MANSOURI ADCE413",
+    "client": null,
+    "contractor": "Hashim Contracting & Gen. Maintenance LLC"
+  },
+  {
+    "id": 5,
+    "title": "OMR.21.140 REPLACEMENT OF CATHODIC PROTECTION UNDERGROUND ICCP ANODES",
+    "client": "ADNOC Gas Processing",
+    "contractor": "Pyramids Energy"
+  },
+  {
+    "id": 6,
+    "title": "ELECTRICAL INTERCONNECTOR & SWITCHGEAR PROJECT",
+    "client": "ADNOC Gas Processing",
+    "contractor": "AG Power Contracting"
+  },
+  {
+    "id": 7,
+    "title": "ELECTRICAL INTERCONNECTOR & SWITCHGEAR PROJECT",
+    "client": "ADNOC Gas Processing",
+    "contractor": "AG Power Contracting"
+  },
+  {
+    "id": 8,
+    "title": "UPGRADING OF IPCS SYSTEM IN GUP & SWI LV SWITCHGEARS AT RUWAIS REFINERY (EAST)",
+    "client": "ADNOC Refining",
+    "contractor": "Pyramids Energy"
+  },
+  {
+    "id": 9,
+    "title": "AD16 DISTRICT COOLING PLANT – ELECTRICAL EXPANSION WORKS",
+    "client": "National Cooling Plant - TABREED",
+    "contractor": "Pyramids Energy"
+  },
+  {
+    "id": 10,
+    "title": "PERMANENT POWER CONNECTION – ZAYED MILITARY CITY",
+    "client": "Command Military Works",
+    "contractor": "AG Power Contracting"
+  },
+  {
+    "id": 11,
+    "title": "REPLACEMENT OF RMU AT SHEIKH RASHED TOWER",
+    "client": "Dubai World Trade Centre",
+    "contractor": "Pyramids Energy"
+  },
+  {
+    "id": 12,
+    "title": "REDUNDANT VSD POWER SUPPLY – RUWAIS REFINERY",
+    "client": "ADNOC Refining",
+    "contractor": "Pyramids Energy"
+  },
+  {
+    "id": 13,
+    "title": "AL MIRFA BEACH HOUSING VILLAS – PLOT P600",
+    "client": "Musanada",
+    "contractor": "Combined Group Cont. Co."
+  },
+  {
+    "id": 14,
+    "title": "RELOCATION WORKS IN SECTOR ME12 PLOT C236",
+    "client": "Abu Dhabi Municipality",
+    "contractor": "Al Qodorat Engineering LLC"
+  },
+  {
+    "id": 15,
+    "title": "NUDRA BEACH VILLAS – SAADIYAT ISLAND",
+    "client": "IMKAN LLC",
+    "contractor": "Eastern International LLC"
   }
 ]

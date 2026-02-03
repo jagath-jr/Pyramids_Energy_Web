@@ -1,0 +1,26 @@
+[
+  {
+    "id": "electrical-services",
+    "title": "Electrical Services",
+    "homePageDescription": "Comprehensive electrical solutions covering power transmission, distribution, substations, and high-voltage systems.",
+    "homePageImage": "Home-img/index-Service-Electrical Services.webp"
+  },
+  {
+    "id": "operation-maintenance",
+    "title": "Operation & Maintenance",
+    "homePageDescription": "Planned and corrective maintenance, testing, and fault-response services.",
+    "homePageImage": "Home-img/index-Service-Operation & Maintenance.webp"
+  },
+  {
+    "id": "civil-mechanical-works",
+    "title": "Civil & Mechanical Works",
+    "homePageDescription": "Coordinated civil and mechanical services supporting electrical infrastructure.",
+    "homePageImage": "Home-img/index-Service-Civil&MechanicalWorks.webp"
+  },
+  {
+    "id": "specialized-services",
+    "title": "Specialized Services",
+    "homePageDescription": "Specialized solutions designed for complex power systems.",
+    "homePageImage": "Home-img/index-Service-SpecializedServices.webp"
+  }
+]
