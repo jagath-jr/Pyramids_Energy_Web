@@ -7,37 +7,37 @@
       {
         "title": "Power Transmission & Distribution (Up to 400kV)",
         "desc": "End-to-end solutions for high-voltage and extra-high-voltage power networks.",
-        "img": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800",
+        "img": "Our service images/Power Transmission & Distribution (Up to 400kV).webp",
         "alt": "High voltage power transmission lines"
       },
       {
         "title": "HV / EHV Cable Laying & Pulling",
         "desc": "Professional installation of underground, overhead, and submarine power cables.",
-        "img": "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=800",
+        "img": "Our service images/HV -EHV Cable Laying & Pulling.webp",
         "alt": "Heavy duty cable installation"
       },
       {
         "title": "Cable Jointing & Termination",
         "desc": "Certified jointing and termination services for XLPE and paper-insulated cables.",
-        "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800",
+        "img": "Our service images/Cable Jointing & Termination (Up to 400kV).webp",
         "alt": "Cable termination work"
       },
       {
         "title": "GIS / AIS / SF6 Switchgear",
         "desc": "Supply, installation, testing, and commissioning of modern switchgear systems.",
-        "img": "https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=800",
+        "img": "Our service images/GIS - AIS - SF6 Switchgear Installation.webp",
         "alt": "Industrial switchgear panels"
       },
       {
         "title": "Ring Main Units (RMU)",
         "desc": "Installation, replacement, refurbishment, and retrofitting of RMUs.",
-        "img": "https://images.unsplash.com/photo-1621905252507-b35220adcfba?q=80&w=800",
+        "img": "Our service images/Ring Main Units (RMU & QRM).webp",
         "alt": "Ring main unit electrical equipment"
       },
       {
         "title": "Transformer Supply & Maintenance",
         "desc": "Oil-filled and dry-type transformer solutions including installation and testing.",
-        "img": "https://images.unsplash.com/photo-1565039272186-2a62372f447f?q=80&w=800",
+        "img": "Our service images/Transformer Supply, Installation & Maintenance.webp",
         "alt": "Large power transformer"
       }
     ]
@@ -50,25 +50,25 @@
       {
         "title": "Preventive & Corrective Maintenance",
         "desc": "Planned and emergency maintenance services to minimize downtime.",
-        "img": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=800",
+        "img": "Our service images/Preventive & Corrective Maintenance.webp",
         "alt": "Maintenance on electrical panel"
       },
       {
         "title": "Substation Assessment",
         "desc": "Detailed inspection, testing, and root cause analysis.",
-        "img": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800",
+        "img": "Our service images/Substation Assessment & Fault Investigation.webp",
         "alt": "Substation inspection"
       },
       {
         "title": "Transformer Oil Filtration",
         "desc": "On-site and workshop oil treatment services to restore dielectric strength.",
-        "img": "https://images.unsplash.com/photo-1590959651373-a3db0f38a961?q=80&w=800",
+        "img": "Our service images/Transformer Oil Filtration & Regeneration.webp",
         "alt": "Oil filtration machine"
       },
       {
         "title": "Condition Monitoring",
         "desc": "Data-driven analysis to optimize maintenance strategies.",
-        "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
+        "img": "Our service images/Condition Monitoring & Performance Analysis.webp",
         "alt": "Thermal imaging analysis"
       }
     ]
@@ -81,19 +81,19 @@
       {
         "title": "Road Works & Excavation",
         "desc": "Civil works including trenching, reinstatement, and infrastructure preparation.",
-        "img": "https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?q=80&w=800",
+        "img": "Our service images/Road Works & Excavation.webp",
         "alt": "Excavation works"
       },
       {
         "title": "Pipeline Installation",
         "desc": "Design and installation of HDPE pipelines for utility and industrial applications.",
-        "img": "https://images.unsplash.com/photo-1542312061-9c631e809311?q=80&w=800",
+        "img": "Our service images/Pipeline Installation (HDPE & Irrigation).webp",
         "alt": "Pipeline installation"
       },
       {
         "title": "Mechanical Installations",
         "desc": "Mechanical erection and associated works supporting electrical projects.",
-        "img": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800",
+        "img": "Our service images/Mechanical Installations.webp",
         "alt": "Mechanical piping system"
       }
     ]
@@ -106,25 +106,25 @@
       {
         "title": "Silicon Rubber Coating",
         "desc": "RTV silicone coating solutions to improve insulation performance.",
-        "img": "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?q=80&w=800",
+        "img": "Our service images/Silicon Rubber Coating on Porcelain Insulators.webp",
         "alt": "Insulator coating"
       },
       {
         "title": "Overhead Transmission Lines",
         "desc": "Design, erection, and commissioning of overhead transmission lines.",
-        "img": "https://images.unsplash.com/photo-1487800940032-1c667b595186?q=80&w=800",
+        "img": "Our service images/Overhead Transmission Lines (11kV – 132kV).webp",
         "alt": "Overhead power lines"
       },
       {
         "title": "Mobile Grid Stations",
         "desc": "Rapid deployment power solutions for temporary requirements.",
-        "img": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800",
+        "img": "Our service images/Mobile Grid Stations.webp",
         "alt": "Mobile power substation"
       },
       {
         "title": "Power Connections",
         "desc": "Safe shifting and connection of LV & HV networks and feeder pillars.",
-        "img": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=800",
+        "img": "Our service images/Temporary & Permanent Power Connections.webp",
         "alt": "Power connection meters"
       }
     ]

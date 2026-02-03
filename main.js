@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // NEW: Function to load data and build the carousel
         async function loadServiceCarousel() {
             try {
-                const response = await fetch('services-data.json');
+                const response = await fetch('Home-services-data.json');
                 if (!response.ok) throw new Error('Failed to fetch services data');
                 const servicesData = await response.json();
 

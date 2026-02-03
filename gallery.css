@@ -25,7 +25,7 @@ background: rgba(255, 255, 255, 0.74);
 
 /* Description */
 .description {
-  padding: 30px 20px;
+  padding: 0 2rem;
   max-width: 1000px;
   margin: auto;
   text-align: center;
@@ -181,10 +181,10 @@ font-size: 4rem;
   width:100vw;
 }
 .services-hero {
-    background-image: url('Home-img/SPlumbing Works.webp');
+    background-color: white;
     background-size: cover;
     background-position: center;
-    height: 20rem;
+    height: 17rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,7 +192,7 @@ font-size: 4rem;
 
 
 .banner h2 {
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     font-weight: 600;
