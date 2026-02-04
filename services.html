@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - Pyramids Energy</title>
-    <link rel="icon" type="image/x-icon" href="header logo.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/ui/header-logo.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
@@ -13,8 +13,8 @@
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="common.css" />
-    <link rel="stylesheet" href="services.css"> </head>
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/services.css"> </head>
 <body>
 
     <div id="header-placeholder"></div>
@@ -42,8 +42,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="common.js"></script>
-    <script src="script.js"></script> <script>
+    <script src="assets/js/common.js"></script>
+     <script>
         // Initialize AOS
         AOS.init({
             duration: 1000,
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainContainer = document.getElementById('dynamic-content');
 
     // Fetch Data
-    fetch('services.json')
+    fetch('data/services.json')
         .then(res => {
             if (!res.ok) throw new Error('Network response was not ok');
             return res.json();

@@ -18,7 +18,7 @@ body {
 /* Hero Section */
 .services-hero {
     /* Make sure the path to your image is correct */
-    background-image: url('Our service images/OurServices-Heroimg.webp'); 
+    background-image: url('../images/services/services-hero.webp'); 
     background-size: cover;
     background-position: center;
     height: 70vh; /* Adjusted from 90vh for better UX */

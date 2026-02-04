@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // 1. Fetch the Header
-  fetch("header.html")
+  fetch("components/header.html")
     .then((response) => {
       if (!response.ok) throw new Error("Header file not found!");
       return response.text();
@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
 // Wait for DOM and GSAP to be ready
 document.addEventListener("DOMContentLoaded", () => {
     // Early return if GSAP isn't available
@@ -96,7 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             // Determine correct path based on current location
             const isServicesPage = window.location.pathname.includes('/services/');
-            const footerPath = isServicesPage ? '../footer.html' : 'footer.html';
+            
+            // Correct path logic:
+            const footerPath = isServicesPage ? '../components/footer.html' : 'components/footer.html';
             
             console.log('Attempting to load footer from:', footerPath);
             
@@ -108,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } catch (err) {
             console.error('Error loading footer, using fallback:', err);
-            // Fallback content if fetch fails
+            // Fallback content
             const isServicesPage = window.location.pathname.includes('/services/');
             const basePath = isServicesPage ? '../' : './';
 
@@ -116,14 +119,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="footer-fallback" style="text-align: center; padding: 20px;">
                     <h4>QUICK LINKS</h4>
                     <p><a href="${basePath}index.html">Home</a> | <a href="${basePath}services/services.html">Services</a></p>
-                    <h4>CONTACT US</h4>
-                    <p>123 Tech Street, Thiruvananthapuram</p>
-                    <p class="copyright">© ${new Date().getFullYear()} Duvitra. All rights reserved.</p>
+                    <p class="copyright">© ${new Date().getFullYear()} Pyramids Energy.</p>
                 </div>
             `;
         } finally {
-            // This runs after either try or catch, ensuring animations always initialize
+            // 1. Initialize Animations
             initializeFooterAnimations();
+            
+            // 2. IMPORTANT: Refresh ScrollTrigger
+            // We use a small timeout to ensure the DOM has fully repainted
+            setTimeout(() => {
+                ScrollTrigger.refresh();
+            }, 100);
         }
     };
 
@@ -131,51 +138,50 @@ document.addEventListener("DOMContentLoaded", () => {
     const initializeFooterAnimations = () => {
         const select = selector => document.querySelector(selector);
         
-        const siteFooter = select('.site-footer');
+        // 1. Footer Container (Matches your HTML: class="ec-footer site-footer")
+        const siteFooter = select('.ec-footer'); 
+        
         if (!siteFooter) {
-            console.warn("'.site-footer' not found, skipping animations.");
+            console.warn("Warning: '.ec-footer' class not found. Animation skipped.");
             return;
         }
 
-        const backgroundText = select('.footer-background-text');
-        const footerColumns = gsap.utils.toArray('.footer-column');
-        const footerLogo = select('.footer-logo');
-        const socialIconsContainer = select('.social-icons');
-        const socialIcons = gsap.utils.toArray('.social-icons a');
+        // --- UPDATED SELECTORS TO MATCH YOUR HTML ---
+        
+        // Matches: <div class="ec-footer__col ...">
+        const footerColumns = gsap.utils.toArray('.ec-footer__col');
+        
+        // Matches: <img ... class="ec-footer__logo-img">
+        const footerLogo = select('.ec-footer__logo-img');
+        
+        // Matches: <div class="ec-footer__socials">
+        const socialIconsContainer = select('.ec-footer__socials');
+        
+        // Matches: <a ... class="ec-footer__social-link">
+        const socialIcons = gsap.utils.toArray('.ec-footer__social-link');
 
-        // --- 1. Fade In Background Text ---
-        if (backgroundText) {
-            gsap.fromTo(backgroundText,
-                { opacity: 0, y: 50 },
-                {
-                    opacity: 0.2, y: 0, duration: 2, ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: siteFooter,
-                        start: "top 80%",
-                        scrub: 0.5, // Scrub is good for this background effect
-                        toggleActions: "play none none reverse"
+
+        // --- ANIMATIONS ---
+
+        // 1. Columns Slide In
+        if (footerColumns.length > 0) {
+            footerColumns.forEach((column, index) => {
+                const direction = index % 2 === 0 ? -30 : 30; 
+                gsap.fromTo(column,
+                    { x: direction, opacity: 0 },
+                    {
+                        x: 0, opacity: 1, duration: 0.8, ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: column,
+                            start: "top 85%", 
+                            toggleActions: "play none none reverse"
+                        }
                     }
-                }
-            );
+                );
+            });
         }
 
-        // --- 2. Slide In Footer Columns (FIXED) ---
-        footerColumns.forEach((column, index) => {
-            const direction = index % 2 === 0 ? -50 : 50;
-            gsap.fromTo(column,
-                { x: direction, opacity: 0 },
-                {
-                    x: 0, opacity: 1, duration: 0.8, ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: column,
-                        start: "top 90%",
-                        toggleActions: "play none none none" // No scrub!
-                    }
-                }
-            );
-        });
-
-        // --- 3. Scale Up Footer Logo ---
+        // 2. Logo Scale
         if (footerLogo) {
             gsap.fromTo(footerLogo,
                 { scale: 0.5, opacity: 0 },
@@ -184,28 +190,28 @@ document.addEventListener("DOMContentLoaded", () => {
                     scrollTrigger: {
                         trigger: footerLogo,
                         start: "top 90%",
-                        toggleActions: "play none none none"
+                        toggleActions: "play none none reverse"
                     }
                 }
             );
         }
 
-        // --- 4. Staggered Fade In for Social Icons ---
+        // 3. Social Icons Stagger
         if (socialIconsContainer && socialIcons.length) {
             gsap.fromTo(socialIcons,
-                { opacity: 0, y: 40 },
+                { opacity: 0, y: 20 },
                 {
-                    opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: "power3.out",
+                    opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: "power3.out",
                     scrollTrigger: {
                         trigger: socialIconsContainer,
-                        start: "top 90%",
-                        toggleActions: "play none none none"
+                        start: "top 95%",
+                        toggleActions: "play none none reverse"
                     }
                 }
             );
         }
     };
 
-    // Start the entire process
+    // Start
     loadFooter();
 });

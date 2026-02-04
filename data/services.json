@@ -7,37 +7,37 @@
       {
         "title": "Power Transmission & Distribution (Up to 400kV)",
         "desc": "End-to-end solutions for high-voltage and extra-high-voltage power networks.",
-        "img": "Our service images/Power Transmission & Distribution (Up to 400kV).webp",
+        "img": "assets/images/services/power-transmission-distribution.webp",
         "alt": "High voltage power transmission lines"
       },
       {
         "title": "HV / EHV Cable Laying & Pulling",
         "desc": "Professional installation of underground, overhead, and submarine power cables.",
-        "img": "Our service images/HV -EHV Cable Laying & Pulling.webp",
+        "img": "assets/images/services/hv-ehv-cable-laying-pulling.webp",
         "alt": "Heavy duty cable installation"
       },
       {
         "title": "Cable Jointing & Termination",
         "desc": "Certified jointing and termination services for XLPE and paper-insulated cables.",
-        "img": "Our service images/Cable Jointing & Termination (Up to 400kV).webp",
+        "img": "assets/images/services/cable-jointing-termination-400kv.webp",
         "alt": "Cable termination work"
       },
       {
         "title": "GIS / AIS / SF6 Switchgear",
         "desc": "Supply, installation, testing, and commissioning of modern switchgear systems.",
-        "img": "Our service images/GIS - AIS - SF6 Switchgear Installation.webp",
+        "img": "assets/images/services/gis-ais-sf6-switchgear.webp",
         "alt": "Industrial switchgear panels"
       },
       {
         "title": "Ring Main Units (RMU)",
         "desc": "Installation, replacement, refurbishment, and retrofitting of RMUs.",
-        "img": "Our service images/Ring Main Units (RMU & QRM).webp",
+        "img": "assets/images/services/ring-main-units.webp",
         "alt": "Ring main unit electrical equipment"
       },
       {
         "title": "Transformer Supply & Maintenance",
         "desc": "Oil-filled and dry-type transformer solutions including installation and testing.",
-        "img": "Our service images/Transformer Supply, Installation & Maintenance.webp",
+        "img": "assets/images/services/transformer-supply-maintenance.webp",
         "alt": "Large power transformer"
       }
     ]
@@ -50,25 +50,25 @@
       {
         "title": "Preventive & Corrective Maintenance",
         "desc": "Planned and emergency maintenance services to minimize downtime.",
-        "img": "Our service images/Preventive & Corrective Maintenance.webp",
+        "img": "assets/images/services/preventive-corrective-maintenance.webp",
         "alt": "Maintenance on electrical panel"
       },
       {
         "title": "Substation Assessment",
         "desc": "Detailed inspection, testing, and root cause analysis.",
-        "img": "Our service images/Substation Assessment & Fault Investigation.webp",
+        "img": "assets/images/services/substation-assessment.webp",
         "alt": "Substation inspection"
       },
       {
         "title": "Transformer Oil Filtration",
         "desc": "On-site and workshop oil treatment services to restore dielectric strength.",
-        "img": "Our service images/Transformer Oil Filtration & Regeneration.webp",
+        "img": "assets/images/services/transformer-oil-filtration.webp",
         "alt": "Oil filtration machine"
       },
       {
         "title": "Condition Monitoring",
         "desc": "Data-driven analysis to optimize maintenance strategies.",
-        "img": "Our service images/Condition Monitoring & Performance Analysis.webp",
+        "img": "assets/images/services/condition-monitoring-performance.webp",
         "alt": "Thermal imaging analysis"
       }
     ]
@@ -81,19 +81,19 @@
       {
         "title": "Road Works & Excavation",
         "desc": "Civil works including trenching, reinstatement, and infrastructure preparation.",
-        "img": "Our service images/Road Works & Excavation.webp",
+        "img": "assets/images/services/road-works-excavation.webp",
         "alt": "Excavation works"
       },
       {
         "title": "Pipeline Installation",
         "desc": "Design and installation of HDPE pipelines for utility and industrial applications.",
-        "img": "Our service images/Pipeline Installation (HDPE & Irrigation).webp",
+        "img": "assets/images/services/pipeline-installation.webp",
         "alt": "Pipeline installation"
       },
       {
         "title": "Mechanical Installations",
         "desc": "Mechanical erection and associated works supporting electrical projects.",
-        "img": "Our service images/Mechanical Installations.webp",
+        "img": "assets/images/services/mechanical-installations.webp",
         "alt": "Mechanical piping system"
       }
     ]
@@ -106,25 +106,25 @@
       {
         "title": "Silicon Rubber Coating",
         "desc": "RTV silicone coating solutions to improve insulation performance.",
-        "img": "Our service images/Silicon Rubber Coating on Porcelain Insulators.webp",
+        "img": "assets/images/services/silicon-rubber-coating.webp",
         "alt": "Insulator coating"
       },
       {
         "title": "Overhead Transmission Lines",
         "desc": "Design, erection, and commissioning of overhead transmission lines.",
-        "img": "Our service images/Overhead Transmission Lines (11kV – 132kV).webp",
+        "img": "assets/images/services/overhead-transmission-lines.webp",
         "alt": "Overhead power lines"
       },
       {
         "title": "Mobile Grid Stations",
         "desc": "Rapid deployment power solutions for temporary requirements.",
-        "img": "Our service images/Mobile Grid Stations.webp",
+        "img": "assets/images/services/mobile-grid-stations.webp",
         "alt": "Mobile power substation"
       },
       {
         "title": "Power Connections",
         "desc": "Safe shifting and connection of LV & HV networks and feeder pillars.",
-        "img": "Our service images/Temporary & Permanent Power Connections.webp",
+        "img": "assets/images/services/power-connections.webp",
         "alt": "Power connection meters"
       }
     ]

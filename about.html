@@ -5,12 +5,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Us - Pyramids Energy</title>
-        <link rel="icon" type="image/x-icon" href="header logo.png">
+        <link rel="icon" type="image/x-icon" href="assets/images/ui/header-logo.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
             integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-        <link rel="stylesheet" href="common.css">
-        <link rel="stylesheet" href="about.css" />
+        <link rel="stylesheet" href="assets/css/about.css">
+        <link rel="stylesheet" href="assets/css/common.css" />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
@@ -107,10 +107,10 @@
             <div class="pm-cert-grid">
                 <div class="pm-cert-item">
                     <img 
-                        src="images\Certificat\page1.jpg" 
+                        src="assets/images/certificates/page1.jpg" 
                         alt="Abu Dhabi Economic License Page 1" 
                         class="pm-cert-img"
-                        data-full-src="images\Certificat\page1.jpg"
+                        data-full-src="assets/images/certificates/page1.jpg"
                     >
                     <div class="pm-cert-overlay">
                         <span class="pm-cert-zoom-icon">+</span>
@@ -119,10 +119,10 @@
 
                 <div class="pm-cert-item">
                     <img 
-                        src="images\Certificat\page2.jpg" 
+                        src="assets/images/certificates/page2.jpg" 
                         alt="Abu Dhabi Economic License Page 2" 
                         class="pm-cert-img"
-                        data-full-src="images\Certificat\page2.jpg"
+                        data-full-src="assets/images/certificates/page2.jpg"
                     >
                     <div class="pm-cert-overlay">
                         <span class="pm-cert-zoom-icon">+</span>
@@ -145,129 +145,166 @@
 <!-- Footer will load here -->
 <div id="common-footer"></div>
 
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-        <script src="main.js"></script>
-        <script src="common.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script>    document.addEventListener("DOMContentLoaded", (event) => {
+    <script src="assets/js/common.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+    // Register GSAP plugins
     gsap.registerPlugin(ScrollTrigger);
+    
+    // Initialize all animations
+    initAnimations();
+    
+    // Initialize lightbox functionality
+    if (document.querySelector('.pm-cert-item')) {
+        initLightbox();
+    }
+});
 
-    // 1. Hero Title Fade In
-    gsap.from(".pm-hero__title", {
+// Animation Configuration
+const animationConfig = {
+    heroTitle: {
         duration: 1,
         y: 30,
         opacity: 0,
         ease: "power2.out"
-    });
-
-    // 2. Company Overview (Simple Fade)
-    gsap.from(".pm-overview", {
+    },
+    overview: {
         scrollTrigger: {
             trigger: ".pm-overview",
-            start: "top 90%",
+            start: "top 90%"
         },
         y: 20,
         opacity: 0,
         duration: 0.8
-    });
-
-    // 3. Mission & Vision Columns (Staggered Slide Up)
-    gsap.from(".pm-value-col", {
+    },
+    values: {
         scrollTrigger: {
             trigger: ".pm-values",
-            start: "top 85%",
+            start: "top 85%"
         },
         y: 50,
         opacity: 0,
         duration: 0.8,
         stagger: 0.2,
         ease: "power2.out"
-    });
-
-    // 4. Director's Message (Scale Width or Fade)
-    gsap.from(".pm-message__box", {
+    },
+    message: {
         scrollTrigger: {
             trigger: ".pm-message",
-            start: "top 85%",
+            start: "top 85%"
         },
         scale: 0.98,
         opacity: 0,
         duration: 1,
         ease: "power2.out"
-    });
-
-    // 5. Offer Items (Staggered Pop in)
-    gsap.from(".pm-offer-item", {
+    },
+    offer: {
         scrollTrigger: {
             trigger: ".pm-offer",
-            start: "top 80%",
+            start: "top 80%"
         },
         y: 20,
         opacity: 0,
         duration: 0.5,
         stagger: 0.1,
         ease: "back.out(1.2)"
-    });
-});
-
-document.addEventListener("DOMContentLoaded", (event) => {
-    // ... (Your previous GSAP animations are here) ...
-
-    // 6. Certifications Section Animation (Fade Up)
-    gsap.from(".pm-cert-item", {
+    },
+    certifications: {
         scrollTrigger: {
             trigger: ".pm-certifications",
-            start: "top 85%",
+            start: "top 85%"
         },
         y: 40,
         opacity: 0,
         duration: 0.8,
         stagger: 0.2,
         ease: "power2.out"
-    });
+    },
+    lightboxImage: {
+        from: {scale: 0.8, opacity: 0},
+        to: {scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.2)"}
+    }
+};
 
-    // --- Lightbox Functionality ---
+// Animation Functions
+function initAnimations() {
+    // 1. Hero Title Fade In
+    gsap.from(".pm-hero__title", animationConfig.heroTitle);
+    
+    // 2. Company Overview (Simple Fade)
+    gsap.from(".pm-overview", animationConfig.overview);
+    
+    // 3. Mission & Vision Columns (Staggered Slide Up)
+    gsap.from(".pm-value-col", animationConfig.values);
+    
+    // 4. Director's Message (Scale Width or Fade)
+    gsap.from(".pm-message__box", animationConfig.message);
+    
+    // 5. Offer Items (Staggered Pop in)
+    gsap.from(".pm-offer-item", animationConfig.offer);
+    
+    // 6. Certifications Section Animation (Fade Up)
+    gsap.from(".pm-cert-item", animationConfig.certifications);
+}
+
+// Lightbox Functions
+function initLightbox() {
     const lightbox = document.getElementById('pmLightbox');
     const lightboxImg = document.getElementById('pmLightboxImage');
     const triggers = document.querySelectorAll('.pm-cert-item');
     const closeBtn = document.querySelector('.pm-lightbox__close');
-
+    
+    if (!lightbox || !lightboxImg || triggers.length === 0) return;
+    
     // Open Lightbox
     triggers.forEach(item => {
         item.addEventListener('click', () => {
-            const img = item.querySelector('img');
-            // Use high-res source if available in data attribute, else use src
-            const fullSrc = img.getAttribute('data-full-src') || img.src;
-            
-            lightboxImg.src = fullSrc;
-            lightbox.classList.add('active');
-            
-            // Optional: GSAP pop animation for the image inside modal
-            gsap.fromTo(lightboxImg, {scale: 0.8, opacity: 0}, {scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.2)"});
+            openLightbox(item, lightbox, lightboxImg);
         });
     });
-
+    
     // Close Lightbox (Button)
-    closeBtn.addEventListener('click', () => {
-        lightbox.classList.remove('active');
-    });
-
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => closeLightbox(lightbox));
+    }
+    
     // Close Lightbox (Clicking Background)
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
-            lightbox.classList.remove('active');
+            closeLightbox(lightbox);
         }
     });
-
+    
     // Close on Escape Key
     document.addEventListener('keydown', (e) => {
         if (e.key === "Escape" && lightbox.classList.contains('active')) {
-            lightbox.classList.remove('active');
+            closeLightbox(lightbox);
         }
     });
-});
-</script>
-    </body>
+}
 
-    </html>
+function openLightbox(item, lightbox, lightboxImg) {
+    const img = item.querySelector('img');
+    // Use high-res source if available in data attribute, else use src
+    const fullSrc = img.getAttribute('data-full-src') || img.src;
+    
+    lightboxImg.src = fullSrc;
+    lightbox.classList.add('active');
+    
+    // Optional: GSAP pop animation for the image inside modal
+    gsap.fromTo(lightboxImg, 
+        animationConfig.lightboxImage.from, 
+        animationConfig.lightboxImage.to
+    );
+}
+
+function closeLightbox(lightbox) {
+    lightbox.classList.remove('active');
+}
+     </script>
+ </body>
+
+ </html>

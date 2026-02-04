@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: center;
     /* Industrial/Construction placeholder */
-    background-image: url('images/About-Heroimg.webp'); 
+    background-image: url('../images/about/About-Heroimg.webp'); 
     background-size: cover;
     background-position: center;
 }

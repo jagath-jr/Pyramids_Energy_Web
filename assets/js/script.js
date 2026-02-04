@@ -1,10 +1,10 @@
 const localGalleryImages = [
-  { url: "Gallery img/galleryimg1.webp", caption: "" },
-  { url: "Gallery img/galleryimg2.webp", caption: "" },
-  { url: "Gallery img/galleryimg3.webp", caption: "" },
-  { url: "Gallery img/galleryimg4.webp", caption: "" },
-  { url: "Gallery img/galleryimg5.webp", caption: "" },
-  { url: "Gallery img/galleryimg6.webp", caption: "" }
+  { url: "assets/images/gallery/gallery-1.webp", caption: "" },
+  { url: "assets/images/gallery/gallery-2.webp", caption: "" },
+  { url: "assets/images/gallery/gallery-3.webp", caption: "" },
+  { url: "assets/images/gallery/gallery-4.webp", caption: "" },
+  { url: "assets/images/gallery/gallery-5.webp", caption: "" },
+  { url: "assets/images/gallery/gallery-6.webp", caption: "" }
   // Add more fallback images
 ];
 
