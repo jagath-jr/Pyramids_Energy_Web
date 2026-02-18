@@ -40,7 +40,8 @@
         "img": "assets/images/services/transformer-supply-maintenance.webp",
         "alt": "Large power transformer"
       }
-    ]
+    ],
+    "homePageImage": "assets/images/home/service-electrical.webp"
   },
   {
     "id": "operation-maintenance",
@@ -71,7 +72,8 @@
         "img": "assets/images/services/condition-monitoring-performance.webp",
         "alt": "Thermal imaging analysis"
       }
-    ]
+    ],
+    "homePageImage": "assets/images/home/service-operation-maintenance.webp"
   },
   {
     "id": "civil-mechanical-works",
@@ -96,7 +98,8 @@
         "img": "assets/images/services/mechanical-installations.webp",
         "alt": "Mechanical piping system"
       }
-    ]
+    ],
+    "homePageImage": "assets/images/home/service-civil-mechanical.webp"
   },
   {
     "id": "specialized-services",
@@ -127,6 +130,7 @@
         "img": "assets/images/services/power-connections.webp",
         "alt": "Power connection meters"
       }
-    ]
+    ],
+    "homePageImage": "assets/images/home/service-specialized.webp"
   }
 ]

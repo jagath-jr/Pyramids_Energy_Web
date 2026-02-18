@@ -183,7 +183,7 @@ async function initializeServicesCarousel() {
     if (!carouselTrack || !dotsContainer) return;
 
     try {
-        const response = await fetch('../data/home-services.json');
+        const response = await fetch('data/services.json');
         if (!response.ok) throw new Error('Failed to fetch services data');
         const servicesData = await response.json();
 
@@ -197,8 +197,8 @@ async function initializeServicesCarousel() {
             card.innerHTML = `
                 <div class="image" style="background-image: url('${service.homePageImage}');"></div>
                 <div class="content">
-                    <h4>${service.title}</h4>
-                    <p>${service.homePageDescription}</p>
+                    <h4>${service.mainService}</h4>
+                    <p>${service.mainDescription}</p>
                     <a href="services.html#${service.id}" class="btn-small">Read More</a>
                 </div>
             `;
