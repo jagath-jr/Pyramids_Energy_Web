@@ -1,0 +1,10 @@
+{
+  "name": "pyramids-energy-web-admin",
+  "version": "1.0.0",
+  "description": "Website with Node.js-powered admin CMS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}

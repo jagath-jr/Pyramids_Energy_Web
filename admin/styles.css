@@ -1,0 +1,19 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fb; color: #1f2937; }
+.hidden { display: none; }
+.centered-card { max-width: 360px; margin: 80px auto; background: white; padding: 24px; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+input, textarea, button, select { width: 100%; padding: 10px; margin: 6px 0; box-sizing: border-box; }
+button { border: 0; border-radius: 6px; background: #d1d5db; cursor: pointer; }
+button.primary { background: #2563eb; color: white; }
+.error { color: #dc2626; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px; background: white; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; }
+.header-actions { display: flex; gap: 8px; }
+#dashboardView { padding-bottom: 30px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 12px; padding: 20px; }
+.card { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; cursor: pointer; }
+.card.active { border-color: #2563eb; box-shadow: 0 0 0 2px rgba(37,99,235,.15); }
+#editorPanel { padding: 0 20px; }
+.section-block { background: white; border-radius: 8px; padding: 20px; margin-bottom: 12px; border: 1px solid #e5e7eb; }
+.list-item { border: 1px dashed #cbd5e1; padding: 12px; margin-bottom: 10px; border-radius: 6px; background: #f8fafc; }
+.item-actions { display: flex; gap: 6px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+small { color: #64748b; }
