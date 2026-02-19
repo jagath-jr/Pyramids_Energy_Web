@@ -1,0 +1,120 @@
+{
+  "global": {
+    "phone": "+971-50-000-0000",
+    "email": "info@pyramidsenergy.ae",
+    "address": "Abu Dhabi, United Arab Emirates",
+    "socialLinks": [
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/company/pyramids-energy"
+      },
+      {
+        "platform": "Facebook",
+        "url": "https://facebook.com/pyramids-energy"
+      }
+    ]
+  },
+  "home": {
+    "hero": {
+      "headline": "Powering Reliable Energy Infrastructure",
+      "subtext": "High-voltage electrical and civil-mechanical solutions across the UAE.",
+      "buttonText": "Explore Services",
+      "buttonLink": "services.html"
+    },
+    "services": [
+      {
+        "title": "Electrical Systems",
+        "description": "HV/LV installation and maintenance.",
+        "icon": "fa-bolt"
+      },
+      {
+        "title": "Civil Works",
+        "description": "Substation and industrial civil works.",
+        "icon": "fa-industry"
+      }
+    ],
+    "contactPanel": {
+      "phone": "+971-50-000-0000",
+      "email": "contact@pyramidsenergy.ae",
+      "address": "Abu Dhabi, UAE"
+    }
+  },
+  "about": {
+    "certifications": [
+      {
+        "image": "assets/images/certificates/page1.jpg",
+        "name": "ISO 9001",
+        "description": "Quality management systems certification."
+      }
+    ]
+  },
+  "servicesPage": {
+    "categories": [
+      {
+        "title": "Web Development",
+        "description": "Modern web solutions",
+        "subServices": [
+          {
+            "title": "E-commerce",
+            "description": "Online storefront implementation",
+            "image": "assets/images/services/services-hero.webp",
+            "features": [
+              "Payments",
+              "Catalog",
+              "Analytics"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "albums": [
+      {
+        "name": "Default Album",
+        "images": [
+          {
+            "title": "Project Yard",
+            "alt": "Workers at project site",
+            "image": "assets/images/gallery/gallery-1.webp"
+          }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "items": [
+      {
+        "title": "Substation Upgrade",
+        "category": "Electrical",
+        "client": "Client Name",
+        "description": "Upgraded 132kV substation systems.",
+        "featuredImage": "assets/images/services/substation-design-construction.webp",
+        "galleryImages": [
+          "assets/images/gallery/gallery-2.webp"
+        ],
+        "date": "2025-01-10",
+        "liveUrl": "https://example.com"
+      }
+    ]
+  },
+  "careers": {
+    "jobs": [
+      {
+        "title": "Electrical Engineer",
+        "department": "Engineering",
+        "location": "Abu Dhabi",
+        "type": "Full-time",
+        "description": "Lead electrical project execution.",
+        "deadline": "2026-12-31",
+        "applyLink": "mailto:hr@pyramidsenergy.ae"
+      }
+    ]
+  },
+  "contact": {
+    "phone": "+971-50-000-0000",
+    "email": "support@pyramidsenergy.ae",
+    "address": "Abu Dhabi, UAE",
+    "mapEmbed": "<iframe src=\"https://maps.google.com\"></iframe>"
+  }
+}
